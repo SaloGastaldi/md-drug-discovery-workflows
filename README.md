@@ -1,7 +1,6 @@
 # 🧬 Molecular Dynamics Automation for Drug Discovery & Membrane Systems
 
-This repository provides a comprehensive toolkit for **automating and analyzing Molecular Dynamics (MD) simulations**, with a focus on **drug–membrane interactions, membrane proteins, and high-throughput computational workflows**.
-
+This repository provides **automation and analysis workflows for Molecular Dynamics (MD) simulations** applied to **drug discovery and membrane systems**.
 The tools are designed to **accelerate simulation analysis, improve reproducibility, and support decision-making in drug discovery and biophysical research**.
 
 ---
@@ -10,8 +9,21 @@ The tools are designed to **accelerate simulation analysis, improve reproducibil
 
 - Drug–membrane interaction analysis  
 - Membrane protein systems  
-- High-throughput MD simulation workflows  
+- High-throughput MD simulation and analysis workflows  
 - Integration with virtual screening pipelines  
+
+---
+
+## 🧪 Example Workflow
+
+**Molecular Dynamics Pipeline for Drug–Membrane Systems**
+
+- System setup: protein–membrane system preparation  
+- Simulation: GROMACS MD execution with SLURM (HPC)  
+- Analysis: lipid order parameters, membrane thickness, ligand orientation  
+- Output: structural and biophysical descriptors for downstream analysis  
+
+👉 Use case: Characterizing drug–membrane interactions and supporting compound evaluation
 
 ---
 
