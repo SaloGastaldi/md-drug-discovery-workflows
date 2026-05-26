@@ -29,17 +29,17 @@ The tools are designed to **accelerate simulation analysis, improve reproducibil
 
 ## 🚀 Key Capabilities
 
-- **HPC Workflow Automation:**  
-  SLURM-based job submission, checkpointing, and scalable execution of GROMACS simulations  
+**HPC Workflow Automation:**
+Automated SLURM-based job submission, checkpointing, and scalable execution of GROMACS simulations.
 
-- **Membrane Biophysics Analysis:**  
-  Order parameters (SCD), bilayer thickness, area per lipid, and lipid conformational states  
+**Membrane Biophysics Analysis:**
+Order parameters (SCD), bilayer thickness, area per lipid, and lipid conformational states.
 
-- **Ligand & Molecular Orientation:**  
-  Time-resolved orientation analysis (Tilt/Φ) and order tensor calculations  
+**Ligand & Molecular Orientation:**
+Time-resolved orientation analysis (Tilt/Φ) and order tensor calculations.
 
-- **Virtual Screening Integration:**  
-  Automated ensemble docking pipelines using AutoDock Vina and Gypsum-DL  
+**Virtual Screening Integration:**
+Automated ensemble docking pipelines using AutoDock Vina and Gypsum-DL.
 
 ---
 
@@ -61,11 +61,11 @@ Characterization of protein conformations relevant for drug targeting.
 
 ---
 
-### ⚙️ High-Throughput Simulation Pipelines
-Automated SLURM workflows for running and analyzing multiple simulations.
+### ⚙️ High-Throughput Simulation Workflows
+Automated SLURM execution for running and analyzing multiple simulations simultaneously.
 
-👉 **Application:**  
-Scaling MD simulations in HPC environments for R&D workflows.
+👉 **Application:**
+Scaling molecular dynamics analysis in HPC environments for high-throughput R&D pipelines.
 
 ---
 
@@ -79,9 +79,10 @@ Improving hit identification by incorporating protein flexibility.
 
 ## 📂 Module Overview
 
-### HPC & System Management
-- SLURM submission scripts for GROMACS and ligand preparation  
-- Optimized execution with MPI/OpenMP and checkpointing  
+### HPC Workflow & Scripting
+
+- Optimized SLURM submission scripts for GROMACS execution and ligand preparation
+- Workflow execution using MPI/OpenMP configurations and simulation checkpointing
 
 ### System Preparation & Docking
 - Automated receptor/ligand preparation  
@@ -107,7 +108,7 @@ Improving hit identification by incorporating protein flexibility.
 
 - **Languages:** Bash, TCL, Python  
 - **Software:** GROMACS, VMD, AutoDock Vina, HOLE, Open Babel, Gypsum-DL  
-- **Environment:** Linux HPC (SLURM)  
+- **Environment:** Linux (SLURM-mediated scientific computing environments) 
 
 ---
 
