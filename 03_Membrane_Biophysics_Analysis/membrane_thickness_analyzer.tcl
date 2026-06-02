@@ -3,6 +3,8 @@
 # Description: Calculates the average bilayer thickness over a trajectory
 # by measuring the distance between the center of mass of reference atoms 
 # (e.g., Phosphorus P8) in the upper and lower leaflets.
+# Bilayer thickness is computed as the distance between the average
+# Z positions of phosphorus atoms belonging to opposite leaflets.
 # --------------------------------------------------------------------------------
 
 package require pbctools
@@ -69,7 +71,7 @@ for {set frame 0} {$frame < $num_steps} {incr frame} {
     puts $fileout "$frame [format %8.4f $current_thickness]"
     puts "Frame $frame: Thickness = [format %8.4f $current_thickness] A"
 }
-
+# Compute average thickness and standard deviation across trajectory
 # 6. Statistical Summary
 set total_t 0.0
 foreach t $list_thickness { set total_t [expr $total_t + $t] }

@@ -3,6 +3,8 @@
 # Script: lipid_order_master.sh
 # Description: Automated calculation of Deuterium Order Parameters (Scd) 
 # for multiple topologies and equilibration times.
+# Order parameters (SCD) provide a quantitative measure of lipid tail
+# ordering and membrane packing.
 # --------------------------------------------------------------------------------
 
 # 1. Configuration: Topologies to analyze
@@ -17,6 +19,8 @@ CHAINS=("sn1" "sn2")
 echo "Starting Lipid Order Parameter Analysis..."
 
 for TPR in "${TOPOLOGIES[@]}"; do
+    # Iterate through all simulation systems, equilibration windows,
+    # and lipid chains.
     if [ -f "$TPR" ]; then
         echo "--------------------------------------------------------"
         echo "Processing Topology: $TPR"

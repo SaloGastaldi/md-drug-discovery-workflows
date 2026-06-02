@@ -2,6 +2,8 @@
 # Script: residue_orientation_analyzer.tcl
 # Description: Calculates the tilt angle (relative to Z) and the azimuthal 
 # angle (phi, relative to X) for a specific residue vector over time.
+# Useful for monitoring preferred orientations of ligands,
+# probes, or membrane-associated residues.
 # --------------------------------------------------------------------------------
 
 # 1. Load System and Trajectory

@@ -3,6 +3,9 @@
 # Description: Interactive tool to calculate and draw improper dihedrals 
 # by picking 4 atoms on the VMD screen.
 # Usage: Source this file and type 'enable_picking' in the console.
+# Application:
+# Interactive structural inspection tool for measuring improper
+# dihedral angles directly within the VMD graphical environment.
 # --------------------------------------------------------------------------------
 
 puts "------------------------------------------------------------"
@@ -46,7 +49,8 @@ proc calculate_four_atoms { args } {
         draw color green
         draw text [lindex [$sel_at get {x y z}] 0] " [expr $vmd_pick_atom]"
     }
-
+    # Once four atoms are selected, compute the improper dihedral angle
+    # and display the result directly in the visualization window.
     if {$counter == 4} {
         set a1 [lindex $list_coord 0]
         set a2 [lindex $list_coord 1]

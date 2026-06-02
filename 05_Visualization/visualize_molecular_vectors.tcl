@@ -2,6 +2,9 @@
 # Script: visualize_molecular_vectors.tcl
 # Description: Draws a 3D arrow representing the molecular normal vector 
 # and a reference Z-axis in VMD. Useful for verifying tilt angle calculations.
+# Application:
+# Visual validation of molecular orientation calculations by displaying
+# reference vectors directly within the molecular structure.
 # --------------------------------------------------------------------------------
 
 proc draw_orientation_vectors {resid_id} {
@@ -20,6 +23,7 @@ proc draw_orientation_vectors {resid_id} {
     set nr5 [lindex [$sel_nr5 get {x y z}] 0]
 
     # 2. Vector Math: Calculating the Normal to the ring
+    # Calculate a vector normal to the selected molecular plane
     set v1 [vecsub $cb $c12]
     set v2 [vecsub $oh $c12]
     
@@ -36,7 +40,8 @@ proc draw_orientation_vectors {resid_id} {
     draw color red
     draw cylinder $nr5 $v_head radius 0.15 resolution 30
     draw cone $v_head $v_end radius 0.4 resolution 30
-
+    
+    # Draw global membrane-normal reference vector 
     # 4. Drawing the Reference Z-axis (GREEN)
     set z_ref {0 0 5}
     set z_head [vecadd [vecscale $z_ref 0.9] $nr5]

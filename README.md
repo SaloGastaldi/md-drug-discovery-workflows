@@ -1,135 +1,139 @@
-# 🧬 Molecular Dynamics Automation for Drug Discovery & Membrane Systems
+# 🧬 MD Drug Discovery Workflows
 
-This repository provides **automation and analysis workflows for Molecular Dynamics (MD) simulations** applied to **drug discovery and membrane systems**.
-The tools are designed to **accelerate simulation analysis, improve reproducibility, and support decision-making in drug discovery and biophysical research**.
+A collection of Molecular Dynamics, Membrane Biophysics, Molecular Modeling, and Drug Discovery workflows developed for computational chemistry and biotech research.
 
----
+This repository contains reusable scripts and analysis pipelines built during academic and applied research projects involving:
 
-## 🎯 Core Focus
-
-- Drug–membrane interaction analysis  
-- Membrane protein systems  
-- High-throughput MD simulation and analysis workflows  
-- Integration with virtual screening pipelines  
-
----
-
-## 🧪 Example Workflow
-
-**Molecular Dynamics Pipeline for Drug–Membrane Systems**
-
-- System setup: protein–membrane system preparation  
-- Simulation: GROMACS MD execution with SLURM (HPC)  
-- Analysis: lipid order parameters, membrane thickness, ligand orientation  
-- Output: structural and biophysical descriptors for downstream analysis  
-
-👉 Use case: Characterizing drug–membrane interactions and supporting compound evaluation
+- Molecular Dynamics simulations
+- Membrane biophysics
+- Protein-ligand interactions
+- Virtual screening
+- HPC automation
+- Structural and trajectory analysis
 
 ---
 
-## 🚀 Key Capabilities
+## 🎯 Repository Scope
 
-**HPC Workflow Automation:**
+The workflows included here support multiple stages of a computational drug discovery pipeline:
+
+### HPC Workflow Automation
+
 Automated SLURM-based job submission, checkpointing, and scalable execution of GROMACS simulations.
 
-**Membrane Biophysics Analysis:**
-Order parameters (SCD), bilayer thickness, area per lipid, and lipid conformational states.
+### Docking & System Preparation
 
-**Ligand & Molecular Orientation:**
-Time-resolved orientation analysis (Tilt/Φ) and order tensor calculations.
+Preparation of receptors and ligands for virtual screening, including ensemble docking workflows using AutoDock Vina and Gypsum-DL.
 
-**Virtual Screening Integration:**
-Automated ensemble docking pipelines using AutoDock Vina and Gypsum-DL.
+### Membrane Biophysics Analysis
 
----
+Analysis of lipid bilayer properties including:
 
-## 🧪 Use Cases
+- Membrane thickness
+- Density profiles
+- Lipid order parameters
+- Lipid conformational states
+- Pore characterization
 
-### 💊 Drug–Membrane Interaction Analysis
-Quantification of lipid order, membrane perturbation, and ligand orientation.
+### Ligand and Protein Dynamics
 
-👉 **Application:**  
-Understanding membrane permeability and drug behavior in lipid environments.
+Analysis of molecular orientation, hydrogen-bond interactions, clustering, and order tensor calculations.
 
----
+### Scientific Data Processing
 
-### 🧬 Membrane Protein Systems
-Analysis of structural dynamics, clustering, and hydrogen-bond networks.
-
-👉 **Application:**  
-Characterization of protein conformations relevant for drug targeting.
-
----
-
-### ⚙️ High-Throughput Simulation Workflows
-Automated SLURM execution for running and analyzing multiple simulations simultaneously.
-
-👉 **Application:**
-Scaling molecular dynamics analysis in HPC environments for high-throughput R&D pipelines.
-
----
-
-### 🧪 Virtual Screening Workflows
-Docking pipelines across multiple conformations (ensemble docking).
-
-👉 **Application:**  
-Improving hit identification by incorporating protein flexibility.
-
----
-
-## 📂 Module Overview
-
-### HPC Workflow & Scripting
-
-- Optimized SLURM submission scripts for GROMACS execution and ligand preparation
-- Workflow execution using MPI/OpenMP configurations and simulation checkpointing
-
-### System Preparation & Docking
-- Automated receptor/ligand preparation  
-- Ensemble docking workflows  
-
-### Membrane & Lipid Analysis
-- Bilayer thickness, SCD, conformational states  
-- Pore analysis and lipid indexing  
-
-### Ligand & Protein Analysis
-- Orientation (Tilt/Φ), order tensors  
-- Hydrogen bonding and clustering  
+Batch processing, RDF calculations, file conversion utilities, and preparation of simulation outputs for downstream statistical analysis.
 
 ### Visualization Tools
-- VMD-based vector visualization and membrane representation  
 
-### Data Processing
-- Data cleaning and batch analysis (RDF, XVG processing)  
+Custom VMD scripts for molecular visualization, geometric measurements, vector analysis, and membrane representation.
 
 ---
 
-## 🛠️ Tech Stack
+## 📂 Repository Structure
 
-- **Languages:** Bash, TCL, Python  
-- **Software:** GROMACS, VMD, AutoDock Vina, HOLE, Open Babel, Gypsum-DL  
-- **Environment:** Linux (SLURM-mediated scientific computing environments) 
+```text
+md-drug-discovery-workflows/
+
+├── 01_HPC_Workflows/
+├── 02_Docking_and_System_Preparation/
+├── 03_Membrane_Biophysics_Analysis/
+├── 04_Ligand_and_Protein_Dynamics/
+├── 05_Visualization/
+└── 06_Data_Processing_and_Analysis/
+```
+
+Each folder contains its own dedicated README with detailed descriptions and usage examples.
+
+---
+
+## 🔬 Typical Workflow
+
+```text
+Ligand Preparation
+        ↓
+Ensemble Docking
+        ↓
+Molecular Dynamics Simulation
+        ↓
+Membrane Biophysics Analysis
+        ↓
+Protein/Ligand Dynamics Analysis
+        ↓
+Scientific Data Processing
+        ↓
+Visualization & Interpretation
+```
+
+---
+
+## 🛠 Technologies
+
+### Programming & Scripting
+
+- Bash
+- TCL
+- Python
+
+### Molecular Modeling
+
+- GROMACS
+- AutoDock Vina
+- Gypsum-DL
+- Open Babel
+- HOLE
+- VMD
+
+### Computing Environment
+
+- Linux
+- SLURM
+- HPC Clusters
 
 ---
 
 ## 💼 Industry Relevance
 
-This repository reflects real-world applications in:
+These workflows reflect tasks commonly encountered in:
 
-- Drug discovery and molecular modeling workflows  
-- Membrane permeability and pharmacokinetics studies  
-- High-throughput simulation pipelines in R&D  
-- Computational support for experimental biophysics  
+- Drug Discovery
+- Computational Chemistry
+- Molecular Modeling
+- Membrane Biophysics
+- Biotech R&D
+- Scientific Computing
 
----
-
-## 🚀 Positioning
-
-Part of a broader profile focused on:
-
-**AI for Drug Discovery | Molecular Dynamics | Computational Biophysics**
+The repository emphasizes automation, reproducibility, and scalability for research and industrial applications.
 
 ---
 
-👩‍🔬 Salomé Gastaldi, PhD  
-📩 msalomegastaldi@gmail.com
+## 👩‍🔬 Author
+
+Salomé Gastaldi
+
+PhD in Biological Sciences | Computational Biology | Molecular Modeling | AI for Drug Discovery
+
+- LinkedIn: https://linkedin.com/in/maría-salomé-gastaldi
+- GitHub: https://github.com/SaloGastaldi
+
+---
+

@@ -9,10 +9,17 @@ set nresid 476
 set fileout [open "lipid_trans_fraction.dat" w]
 set num_steps [molinfo top get numframes]
 set SL_chain {C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18} 
+# Lipid hydrocarbon chain atoms used to calculate dihedral states.
+# Trans and gauche populations are used to quantify chain flexibility
+# and membrane ordering.
 
 # Selection
 set sel1 [atomselect top "name $SL_chain and resid $nresid"] 
 
+# Classification:
+# Trans   : dihedral > 120° or < -120°
+# Gauche+ : 0° to 120°
+# Gauche- : -120° to 0°
 # Logic: Categorizes dihedrals into Trans (>120 or <-120), 
 # Gauche+ (0 to 120), and Gauche- (-120 to 0).
 # [ ... código optimizado con bucles para el cálculo de estadísticas ... ]

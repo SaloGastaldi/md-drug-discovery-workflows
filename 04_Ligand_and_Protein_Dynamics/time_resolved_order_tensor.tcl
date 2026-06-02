@@ -3,6 +3,8 @@
 # Description: Calculates time-resolved Order Tensor and angular dispersion
 # using a sliding window (delta_t) approach. 
 # Analyzes the tilt (theta) and azimuth (phi) of molecular moieties.
+# Sliding-window analysis allows monitoring orientation changes
+# and dynamic reorganization events throughout the trajectory.
 # --------------------------------------------------------------------------------
 
 package require La

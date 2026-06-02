@@ -2,6 +2,8 @@
 # Script: generate_lipid_indices.tcl
 # Description: Generates GROMACS .ndx files for specific lipid atoms, 
 # separating them by membrane leaflet (Upper and Lower) based on Z coordinates.
+# Generate leaflet-specific atom groups for downstream GROMACS analyses
+# such as SCD calculations and leaflet-resolved membrane properties.
 # --------------------------------------------------------------------------------
 
 proc generate_leaflet_ndx { } {

@@ -2,6 +2,10 @@
 # Script: draw_membrane_planes.tcl
 # Description: Visual aid tool for VMD. Draws translucent or opaque planes 
 # at specific Z coordinates to represent membrane boundaries.
+# Application:
+# Provides a visual representation of membrane boundaries and leaflet
+# positions to facilitate interpretation of insertion depth, orientation,
+# and membrane-associated events.
 # --------------------------------------------------------------------------------
 
 proc draw_plane {x_dim y_dim z_pos color} {
@@ -11,6 +15,7 @@ proc draw_plane {x_dim y_dim z_pos color} {
     draw color $color
 
     # Drawing the plane using two triangles to form a rectangle
+    # Define the four vertices of the rectangular membrane plane
     # Vertex coordinates:
     set p1 [list 0      0      $z_pos]
     set p2 [list $x_dim 0      $z_pos]

@@ -15,6 +15,8 @@ echo 0 2 3 10 11 12 13 | gmx density -f trajout.xtc -n index-dens.ndx -s md.tpr 
 echo "Calculating membrane thickness..."
 echo 0 8 9 3 10 11 | gmx traj -f trajout.xtc -s md.tpr -n index.ndx -ng 4 -ox coord.xvg -tu ns -pbc -z -com -nox -noy -xvg none
 
+# Recenter coordinates relative to the membrane center and calculate
+# membrane thickness as the distance between upper and lower leaflets
 # AWK processing: $2=center, $3=upper, $4=lower, $5=sulfur
 awk '{centro = $2 - $2; arriba = $3 - $2; abajo = $4 - $2; width = $3 - $4; print $1, centro, arriba, abajo, width}' coord.xvg > membrane_stats.dat
 rm coord.xvg
@@ -28,6 +30,8 @@ fi
 
 # 4. ORDER PARAMETERS (SCD)
 # Calculating deuterium order parameters for lipid tails (last 100ns)
+# Deuterium order parameters are used as a proxy for lipid tail ordering
+# and membrane fluidity.
 echo "Calculating order parameters (Scd)..."
 gmx order -s md.tpr -f trajout.xtc -n sn1.ndx -b 100000 -d z -od deuter_sn1-100.xvg
 

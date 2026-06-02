@@ -3,6 +3,8 @@
 # Description: Calculates the Orientation Order Tensor and Principal Axes
 # for a specific molecular moiety (e.g., doxyl ring in SL05).
 # Includes diagonalization of the matrix using the 'La' package.
+# Order tensors provide a quantitative description of orientational
+# ordering and molecular alignment relative to the membrane normal.
 # --------------------------------------------------------------------------------
 
 package require La

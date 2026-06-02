@@ -3,6 +3,9 @@
 # Description: Custom selection and removal of specific residues (PNP) 
 # to adjust system concentration or configuration.
 # Usage: vmd -dispdev text -e filter_ligands.tcl
+# Application:
+# Creates customized molecular systems by removing selected ligands
+# or residues from an existing structure.
 # --------------------------------------------------------------------------------
 
 # 1. Load the system (if not already loaded)
@@ -17,6 +20,8 @@ puts "Current PNP residues: $pnp_residues"
 # 3. Create a selection EXCLUDING specific residues
 # We are filtering out residues: 5257, 5254, 5251, 5248, 5255
 # to reduce the concentration from 10 to 5 molecules.
+# Generate a reduced-composition system while preserving
+# all remaining molecular components.
 set filtered_system [atomselect top "not residue 5257 5254 5251 5248 5255"]
 
 # 4. Save the new filtered system

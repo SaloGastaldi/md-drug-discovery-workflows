@@ -3,6 +3,9 @@
 # Script: hbond_master_analysis.sh
 # Description: Systematic Hydrogen Bond analysis for Fluralaner (FLU) interaction
 # with DPPC membranes and Water. Supports multiple topologies and trajectories.
+# Application:
+# Quantifies interaction persistence between ligands, membrane components,
+# and solvent environments across multiple simulation conditions.
 # --------------------------------------------------------------------------------
 
 # 1. Configuration: Define analysis sets (Topology | Trajectory | Label)
@@ -15,6 +18,8 @@ SETS=(
 
 # 2. Functional Groups Mapping (Based on your Index file)
 # Pair: "GroupIDs:Description"
+# Index groups representing ligand functional groups,
+# membrane moieties, and solvent molecules.
 PAIRS=(
     "3 2:FLU_DPPC"
     "3 7:FLU_DPPC_phosphate"

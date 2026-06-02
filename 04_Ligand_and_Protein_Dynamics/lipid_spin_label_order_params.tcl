@@ -3,6 +3,9 @@
 # Description: Advanced calculation of Order Parameters for n-SASL acyl chains.
 # Computes dual order tensors for both the acyl chain segments and the 
 # attached nitroxide ring normal vector.
+# Designed for spin-labeled lipid systems (n-SASL probes).
+# Calculates orientational ordering for both the acyl chain segment
+# and the nitroxide reporter group.
 # --------------------------------------------------------------------------------
 
 package require La
@@ -12,6 +15,10 @@ mol new SL05_marcadorsolo.gro
 mol addfile SL05_marcadorsolo.xtc first 1 last 150000 step 1 waitfor all
 
 # 2. Setup Parameters
+# Two independent order tensors are calculated:
+# 1) Acyl-chain local frame
+# 2) Nitroxide ring normal vector
+
 set res_start 1; set res_end 1
 set t_ns 4       ;# Time window size in ns
 set t_final 150  ;# Total trajectory time
